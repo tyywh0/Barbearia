@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Premium - Sistema de Agendamento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-amber-600 to-amber-800 shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-cut text-3xl"></i>
+                    <h1 class="text-3xl font-bold">Barbearia Premium</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-amber-200 transition-colors">Início</a>
+                    <a href="#services" class="hover:text-amber-200 transition-colors">Serviços</a>
+                    <a href="#barbers" class="hover:text-amber-200 transition-colors">Barbeiros</a>
+                    <a href="#booking" class="hover:text-amber-200 transition-colors">Agendamento</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-b from-gray-800 to-gray-900 py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-6 text-amber-400">Estilo e Tradição</h2>
+            <p class="text-xl mb-8 text-gray-300">A melhor experiência em cortes masculinos da cidade</p>
+            <button onclick="scrollToBooking()" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg transition-colors transform hover:scale-105">
+                Agendar Agora
+            </button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-12 text-amber-400">Nossos Serviços</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-6 rounded-lg text-center hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-cut text-4xl text-amber-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Corte Tradicional</h4>
+                    <p class="text-gray-300 mb-4">Corte clássico com acabamento perfeito</p>
+                    <span class="text-2xl font-bold text-amber-400">R$ 35,00</span>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg text-center hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-beard text-4xl text-amber-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Barba + Bigode</h4>
+                    <p class="text-gray-300 mb-4">Aparar e modelar barba e bigode</p>
+                    <span class="text-2xl font-bold text-amber-400">R$ 25,00</span>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg text-center hover:bg-gray-600 transition-colors">
+                    <i class="fas fa-spa text-4xl text-amber-400 mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Pacote Completo</h4>
+                    <p class="text-gray-300 mb-4">Corte + Barba + Tratamento</p>
+                    <span class="text-2xl font-bold text-amber-400">R$ 55,00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barbers Section -->
+    <section id="barbers" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-12 text-amber-400">Nossos Barbeiros</h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-24 h-24 bg-amber-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-3xl text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Carlos Silva</h4>
+                    <p class="text-gray-400 mb-2">15 anos de experiência</p>
+                    <div class="flex justify-center mb-2">
+                        <span class="text-amber-400">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-gray-500">Especialista em cortes clássicos</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-24 h-24 bg-amber-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-3xl text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">João Santos</h4>
+                    <p class="text-gray-400 mb-2">12 anos de experiência</p>
+                    <div class="flex justify-center mb-2">
+                        <span class="text-amber-400">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-gray-500">Expert em barbas e bigodes</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-24 h-24 bg-amber-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-3xl text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Pedro Lima</h4>
+                    <p class="text-gray-400 mb-2">8 anos de experiência</p>
+                    <div class="flex justify-center mb-2">
+                        <span class="text-amber-400">★★★★☆</span>
+                    </div>
+                    <p class="text-sm text-gray-500">Cortes modernos e estilosos</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-24 h-24 bg-amber-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-3xl text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">Rafael Costa</h4>
+                    <p class="text-gray-400 mb-2">10 anos de experiência</p>
+                    <div class="flex justify-center mb-2">
+                        <span class="text-amber-400">★★★★★</span>
+                    </div>
+                    <p class="text-sm text-gray-500">Especialista em degradês</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-12 text-amber-400">Agendar Horário</h3>
+            <div class="max-w-2xl mx-auto bg-gray-700 p-8 rounded-lg">
+                <form id="bookingForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="clientName" required class="w-full p-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-amber-400 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">WhatsApp</label>
+                            <input type="tel" id="clientPhone" required placeholder="(11) 99999-9999" class="w-full p-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-amber-400 focus:outline-none">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Serviço</label>
+                        <select id="serviceType" required class="w-full p-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-amber-400 focus:outline-none">
+                            <option value="">Selecione um serviço</option>
+                            <option value="corte">Corte Tradicional - R$ 35,00</option>
+                            <option value="barba">Barba + Bigode - R$ 25,00</option>
+                            <option value="completo">Pacote Completo - R$ 55,00</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Barbeiro</label>
+                        <select id="barberSelect" required class="w-full p-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-amber-400 focus:outline-none">
+                            <option value="">Selecione um barbeiro</option>
+                            <option value="carlos">Carlos Silva</option>
+                            <option value="joao">João Santos</option>
+                            <option value="pedro">Pedro Lima</option>
+                            <option value="rafael">Rafael Costa</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Data</label>
+                            <input type="date" id="appointmentDate" required class="w-full p-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-amber-400 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Horário</label>
+                            <select id="appointmentTime" required class="w-full p-3 bg-gray-600 border border-gray-500 rounded-lg focus:border-amber-400 focus:outline-none">
+                                <option value="">Selecione um horário</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition-colors transform hover:scale-105">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        Confirmar Agendamento via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointments List -->
+    <section class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-12 text-amber-400">Meus Agendamentos</h3>
+            <div class="max-w-4xl mx-auto">
+                <div id="appointmentsList" class="space-y-4">
+                    <!-- Appointments will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <i class="fab fa-facebook text-2xl text-amber-400 hover:text-amber-300 cursor-pointer"></i>
+                <i class="fab fa-instagram text-2xl text-amber-400 hover:text-amber-300 cursor-pointer"></i>
+                <i class="fab fa-whatsapp text-2xl text-amber-400 hover:text-amber-300 cursor-pointer"></i>
+            </div>
+            <p class="text-gray-400">&copy; 2024 Barbearia Premium. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
